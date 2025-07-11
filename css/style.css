@@ -1,0 +1,27 @@
+/* Custom scrollbar for better aesthetics */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  /* Light gray */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+  /* Darker gray */
+}
+
+/* Custom strikethrough class for completed tasks */
+.strikethrough {
+  text-decoration: line-through;
+  color: #9ca3af;
+  /* A lighter gray to indicate completion/less emphasis */
+}
