@@ -16,9 +16,8 @@
   <li>🗂️ <strong>Filter Tasks</strong> by:
     <ul>
       <li>All</li>
-      <li>Open (complete)</li>
-      <li>Closed (completed)</li>
-      <li>Archived (clone and try add it)</li>
+      <li>Open (incomplete task)</li>
+      <li>Closed (completed task)</li>
     </ul>
   </li>
   <li>🗑️ <strong>Delete Tasks</strong> (individually or all at once, with confirmation modal)</li>
