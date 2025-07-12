@@ -7,6 +7,25 @@ let currentFilter = 'open'; // Keep track of the currently active filter
 let currentDeleteTarget = null; // To store id of task or 'all' for all tasks
 let currentDeleteAction = null; // To store the function to execute (deleteTask or deleteAllTasks)
 
+
+// --- Date Formatting Function ---
+function getFormattedDate() {
+  const date = new Date(); // Gets the current date and time
+
+  const options = {
+    weekday: 'long', // Full weekday name (e.g., "Saturday")
+    day: 'numeric',  // Day of the month (e.g., "12")
+    month: 'long',    // Full month name (e.g., "July")
+    year: 'numeric'    // Full month name (e.g., "July")
+  };
+
+  // Uses toLocaleDateString to format the date according to the specified options
+  // and the user's locale (or a specified locale like 'en-US' for consistency).
+  return date.toLocaleDateString('id-ID', options);
+}
+// --- End Date Formatting Function ---
+
+
 // Function to add a task
 function addTask() {
   const taskInput = document.getElementById('task-input');
@@ -214,6 +233,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const confirmDeleteButton = document.getElementById('confirm-delete-button');
   const cancelDeleteButton = document.getElementById('cancel-delete-button');
 
+  // --- Start of Date Display Integration ---
+  const dateParagraph = document.querySelector('.date-display');
+  if (dateParagraph) {
+    dateParagraph.textContent = getFormattedDate();
+  }
+  // --- End of Date Display Integration ---
 
   // Function to handle tab switching
   const switchTab = (tabId) => {
